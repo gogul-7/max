@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "ParkQwik",
+    "slug": "parkqwik",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/images/appicon2.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./app/assets/images/appicon2.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow ParkQwik to access camera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone",
+        "NSContactsUsageDescription": "Allow $(ParkQwik) to access your contacts."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/images/appicon2.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS"
+      ],
+      "package": "com.gogulcp3.parkqwik",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAzLUmbY6auViMjZ7KcSIKUwgZb4nEq9sU"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./app/assets/images/appicon2.png"
+    },
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow ParkQwik to access camera."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(ParkQwik) to access your contacts."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share the authorities."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(ParkQwik) to use your location."
+        }
+      ],
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9a4cbd12-ff01-4170-a2db-de92d2b92c9b"
+      }
+    },
+    "owner": "gogulcp3",
+    "runtimeVersion": "exposdk:49.0.13",
+    "updates": {
+      "url": "https://u.expo.dev/9a4cbd12-ff01-4170-a2db-de92d2b92c9b"
+    }
+  }
+}
